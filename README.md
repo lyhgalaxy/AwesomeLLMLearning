@@ -1,6 +1,6 @@
 # Awesome LLM Learning
 
-一套面向大语言模型初学者与工程实践者的中文学习笔记，从 NLP 基础、Tokenizer 和 Transformer 原理，逐步延伸到训练、强化学习、MoE、推理加速、量化与生产部署。
+一套面向大语言模型初学者与工程实践者的中文学习笔记，从 NLP 基础、Tokenizer 和 Transformer 原理，逐步延伸到训练、强化学习、MoE、推理加速、量化、生产部署与系统评估。
 
 笔记尽量使用通俗语言，并通过流程图、结构图、注意力矩阵、对比表、公式拆解和小型代码实验帮助理解。涉及模型参数、训练数据及新算法时，优先引用原始论文、官方技术报告和官方文档。
 
@@ -26,6 +26,8 @@ PPO、DPO、GRPO、DAPO、GSPO
 主流模型、工程复现与部署
   ↓
 MoE 混合专家模型
+  ↓
+LLM 评估与业务验收
 ```
 
 ## 章节目录
@@ -42,6 +44,7 @@ MoE 混合专家模型
 10. [工程实践与复现路线](./llm/LLM学习笔记-第10章-工程实践与复现路线.md)
 11. [LLM 推理加速、量化与部署](./llm/LLM学习笔记-第11章-LLM推理加速量化与部署.md)
 12. [深入理解 MoE 混合专家模型](./llm/LLM学习笔记-第12章-深入理解MoE混合专家模型.md)
+13. [LLM 评估体系、指标与 Benchmark](./llm/LLM学习笔记-第13章-LLM评估体系与Benchmark.md)
 
 ## 主要内容
 
@@ -56,6 +59,7 @@ MoE 混合专家模型
 - vLLM、SGLang、DeepSpeed、FlashAttention、PagedAttention 和 RadixAttention；
 - GPTQ、AWQ、SmoothQuant、FP8、KV Cache 量化和推测解码；
 - MoE Router、Top-k、Shared Expert、负载均衡、Expert Parallel 与 All-to-All。
+- Base/Chat/Reasoning/RAG/Agent 模型的能力、事实性、安全、鲁棒性、系统性能、成本和业务效果评估。
 
 ## 笔记结构
 
