@@ -1,12 +1,17 @@
-# Awesome LLM Learning
+# Awesome LLM & VLM Learning
 
-一套面向大语言模型初学者与工程实践者的中文学习笔记，从 NLP 基础、Tokenizer 和 Transformer 原理，逐步延伸到训练、强化学习、MoE、推理加速、量化、生产部署与系统评估。
+一套面向大语言模型与视觉语言模型初学者、工程实践者的中文学习笔记。内容从 NLP、Tokenizer 和 Transformer 原理，延伸到 LLM 训练与部署；同时覆盖视觉基础、ViT、CLIP/SigLIP、DINO、VLM 架构、训练、强化学习、评估和生产部署。
 
 笔记尽量使用通俗语言，并通过流程图、结构图、注意力矩阵、对比表、公式拆解和小型代码实验帮助理解。涉及模型参数、训练数据及新算法时，优先引用原始论文、官方技术报告和官方文档。
 
 ## 开始阅读
 
-完整目录与学习路线：[LLM 学习笔记总目录](./llm/LLM学习笔记-总目录.md)
+项目分为两条学习路线：
+
+- [LLM 学习笔记总目录](./llm/LLM学习笔记-总目录.md)
+- [VLM 学习笔记总目录](./vlm/VLM学习笔记-总目录.md)
+
+### LLM 路线
 
 建议按照章节顺序学习：
 
@@ -30,7 +35,27 @@ MoE 混合专家模型
 LLM 评估与业务验收
 ```
 
-## 章节目录
+### VLM 路线
+
+```text
+视觉任务与图像表示
+  ↓
+ViT → CLIP / SigLIP → DINO
+  ↓
+视觉编码器与 LLM 的连接和融合
+  ↓
+VLM 发展史、重点模型与原生多模态
+  ↓
+数据工程、Pre-training、CPT、SFT、LoRA
+  ↓
+多模态 DPO / PPO / GRPO
+  ↓
+评估、推理加速、量化与部署
+  ↓
+端到端工程实践
+```
+
+## LLM 章节目录
 
 1. [NLP 与语言模型基础](./llm/LLM学习笔记-第01章-NLP与语言模型基础.md)
 2. [从 N-gram 到 Transformer：NLP 模型发展史](./llm/LLM学习笔记-第02章-NLP模型发展史.md)
@@ -46,6 +71,25 @@ LLM 评估与业务验收
 12. [深入理解 MoE 混合专家模型](./llm/LLM学习笔记-第12章-深入理解MoE混合专家模型.md)
 13. [LLM 评估体系、指标与 Benchmark](./llm/LLM学习笔记-第13章-LLM评估体系与Benchmark.md)
 
+## VLM 章节目录
+
+1. [VLM 基础与任务边界](./vlm/VLM学习笔记-第01章-VLM基础与任务边界.md)
+2. [计算机视觉与图像表示基础](./vlm/VLM学习笔记-第02章-计算机视觉与图像表示基础.md)
+3. [ViT 与视觉 Transformer](./vlm/VLM学习笔记-第03章-ViT与视觉Transformer.md)
+4. [CLIP、ALIGN、SigLIP 与 SigLIP2](./vlm/VLM学习笔记-第04章-CLIP与SigLIP图文对齐.md)
+5. [DINO、DINOv2 与 DINOv3](./vlm/VLM学习笔记-第05章-DINO自监督视觉学习.md)
+6. [VLM 的连接与融合架构](./vlm/VLM学习笔记-第06章-VLM连接与融合架构.md)
+7. [VLM 发展史](./vlm/VLM学习笔记-第07章-VLM发展史.md)
+8. [重点开源 VLM 系列解析](./vlm/VLM学习笔记-第08章-重点开源VLM系列解析.md)
+9. [原生多模态模型](./vlm/VLM学习笔记-第09章-原生多模态模型.md)
+10. [VLM 数据工程](./vlm/VLM学习笔记-第10章-VLM数据工程.md)
+11. [VLM 完整训练链路](./vlm/VLM学习笔记-第11章-VLM完整训练链路.md)
+12. [VLM 微调方法与开源训练框架](./vlm/VLM学习笔记-第12章-VLM微调与训练框架.md)
+13. [多模态偏好优化与强化学习](./vlm/VLM学习笔记-第13章-多模态偏好优化与强化学习.md)
+14. [VLM 评估体系与 Benchmark](./vlm/VLM学习笔记-第14章-VLM评估体系与Benchmark.md)
+15. [VLM 推理、加速、量化与部署](./vlm/VLM学习笔记-第15章-VLM推理加速量化与部署.md)
+16. [端到端工程实践](./vlm/VLM学习笔记-第16章-端到端工程实践.md)
+
 ## 主要内容
 
 - Tokenizer 是否需要模型、BPE/WordPiece/Unigram 如何训练，以及数据量与词表大小如何选择；
@@ -60,10 +104,15 @@ LLM 评估与业务验收
 - GPTQ、AWQ、SmoothQuant、FP8、KV Cache 量化和推测解码；
 - MoE Router、Top-k、Shared Expert、负载均衡、Expert Parallel 与 All-to-All。
 - Base/Chat/Reasoning/RAG/Agent 模型的能力、事实性、安全、鲁棒性、系统性能、成本和业务效果评估。
+- 图片张量、Patch、ViT、CLIP/SigLIP、DINO 自监督视觉学习；
+- Projector、Q-Former、Resampler、动态分辨率和视觉 Token 压缩；
+- LLaVA、Qwen-VL、InternVL、DeepSeek-VL 与原生多模态模型；
+- VLM 数据、Pre-training、CPT、SFT、LoRA、DPO、PPO 和 GRPO；
+- OCR、Grounding、视频、GUI Agent、幻觉评估与多模态部署。
 
 ## 笔记结构
 
-所有学习资料都位于 [`llm/`](./llm/) 目录中。每章通常包含：
+学习资料分别位于 [`llm/`](./llm/) 和 [`vlm/`](./vlm/) 目录中。每章通常包含：
 
 - 本章知识地图；
 - 核心概念与结构图；
